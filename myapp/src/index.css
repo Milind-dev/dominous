@@ -21,3 +21,11 @@ code {
 .flex-container{
   display: flex !important;
 }
+.btn{
+  color: white !important;
+  background: red !important;
+}
+select{
+  box-shadow: none !important;
+  border-color: black !important;
+}

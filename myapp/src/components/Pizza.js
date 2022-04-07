@@ -1,8 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 
 function Pizza({pizza}){
-	// const [quantity,setquantity] = useState(1);
-	// const [varient,setVarient] = useState('small');
+	const [quantity,setquantity] = useState(1);
+	const [varient,setVarient] = useState('small');
 	return(
 			<div> 
 				<h1> {pizza.name}</h1>
@@ -10,7 +10,7 @@ function Pizza({pizza}){
 				<div className="flex-container"> 
                   	<div className="w-100">
                   		<p> Varient </p>
-                  		<select>
+                  		<select value={varient} onChange={(e)=>setVarient(e.target.value)}>
                   			{ pizza.varients.map(varient=>{
                   					return <option value={varient}> {varient} </option>
                   				})
@@ -21,7 +21,7 @@ function Pizza({pizza}){
 
                   	<div className="w-100"> 
                   		<p> Quantity</p>
-                  		<select> 
+                  		<select value={quantity} onChange={(e)=>{setquantity(e.target.value)}}> 
                   			{/*{ pizza.price.map(price=>)}*/}
 	                  		{[...Array(10).keys()].map((x,i)=>{
 	                  			return <option value={i+1}> {i+1} </option>
@@ -31,7 +31,9 @@ function Pizza({pizza}){
 
 
                   	<div className="flex-container"> 
-                  		<div> </div>
+                  		<div> 
+                  			<h1> Price : {pizza.prices[0][varient] * quantity}</h1>
+                  		</div>
                   		<div> </div>
                   		<div> </div>
                   	</div>

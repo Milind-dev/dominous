@@ -23,7 +23,7 @@ export default function Navbar() {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">
-                Login 
+                Login
               </a>
             </li>
             <li className="nav-item">

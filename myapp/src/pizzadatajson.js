@@ -42,9 +42,6 @@ const pizzas  = [
 	 "description":"A baked dish originating in Italy, which consists of a flat, round, crispy leavened dough covered with a layer of sauce and a layer of one or more toppings, .."
      },
 
-
-     // 
-
      {
 	"name":"peper barbeque",
 	"varients":["small","medium","large"],
